@@ -1,0 +1,9 @@
+Postgre a été installé avec brew
+
+Dossier ou est installer Postgre sur le mac
+/usr/local/var/postgres
+
+Commande pour démarrer le serveur PostGreSQL
+
+pg_ctl -D /usr/local/var/postgres start
+brew services start postgresql
