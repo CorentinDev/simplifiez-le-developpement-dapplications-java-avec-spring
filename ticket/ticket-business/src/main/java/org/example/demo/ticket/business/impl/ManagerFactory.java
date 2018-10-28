@@ -22,6 +22,6 @@ public class ManagerFactory {
     }
 
     public void setTicketManager(TicketManager ticketManager) {
-
+        this.ticketManager = ticketManager;
     }
 }
