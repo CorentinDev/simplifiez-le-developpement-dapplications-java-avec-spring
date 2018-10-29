@@ -3,7 +3,7 @@ package org.example.demo.ticket.batch;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.example.demo.ticket.business.impl.ManagerFactory;
+import org.example.demo.ticket.business.impl.ManagerFactoryImpl;
 import org.example.demo.ticket.model.exception.TechnicalException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -30,7 +30,7 @@ public class Main {
 
         ApplicationContext  vApplicationContext = new ClassPathXmlApplicationContext("classpath:/applicationContexte.xml");
 
-        ManagerFactory managerFactory = vApplicationContext.getBean("managerFactory", ManagerFactory.class);
+        ManagerFactoryImpl managerFactoryImpl = vApplicationContext.getBean("managerFactory", ManagerFactoryImpl.class);
 
         try {
             if (pArgs.length < 1) {

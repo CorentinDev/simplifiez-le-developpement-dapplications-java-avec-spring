@@ -1,13 +1,18 @@
 package org.example.demo.ticket.business.impl;
 
+import org.example.demo.ticket.business.contract.ManagerFactory;
 import org.example.demo.ticket.business.contract.manager.ProjetManager;
 import org.example.demo.ticket.business.contract.manager.TicketManager;
 
-public class ManagerFactory {
+import javax.inject.Inject;
+import javax.inject.Named;
 
+@Named ("mangerFactory")
+public class ManagerFactoryImpl implements ManagerFactory {
+
+    @Inject
     private ProjetManager projetManager;
-    private TicketManager ticketManager;
-
+    @Override
     public ProjetManager getProjetManager(){
         return this.projetManager;
     }
@@ -16,7 +21,9 @@ public class ManagerFactory {
         this.projetManager = projetManager;
     }
 
-
+    @Inject
+    private TicketManager ticketManager;
+    @Override
     public TicketManager getTicketManager(){
         return this.ticketManager;
     }
