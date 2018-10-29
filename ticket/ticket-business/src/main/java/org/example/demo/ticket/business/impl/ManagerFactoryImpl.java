@@ -7,7 +7,7 @@ import org.example.demo.ticket.business.contract.manager.TicketManager;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named ("mangerFactory")
+@Named ("managerFactory")
 public class ManagerFactoryImpl implements ManagerFactory {
 
     @Inject
